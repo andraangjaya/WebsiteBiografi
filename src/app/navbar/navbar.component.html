@@ -1,0 +1,50 @@
+<!--<span><a routerLink="/">Home</a></span> <br>-->
+<!--<span><a routerLink="/biography">Biography</a></span> <br>-->
+<!--<span><a routerLink="/about-us">About Us</a></span> <br>-->
+
+<header class="bg-black border-b sticky top-0">
+  <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- Brand / Logo -->
+    <div class="text-5xl mt-5 mb-5 ml-20 font-bold text-white tracking-wide">
+      N A M A B I O G R A F I
+    </div>
+
+    <!-- Nav Links -->
+    <!-- On mobile: hidden when isOpen=false, shown when isOpen=true -->
+    <!-- On md+ screens: always shown (flex) -->
+    <div
+      class="w-full md:w-auto md:flex md:items-center"
+      [ngClass]="{
+        'hidden': !isOpen,
+        'block': isOpen,
+        'mt-3': isOpen,
+        'md:mt-0': true
+      }"
+    >
+      <ul class="md:flex md:space-x-6">
+        <li>
+          <a
+            routerLink="/"
+            class="block px-2 py-1 text-white hover:text-indigo-500 text-2xl"
+          >Home</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/biography"
+            class="block px-2 py-1 text-white hover:text-indigo-500 text-2xl"
+          >Biography</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/about-us"
+            class="block px-2 py-1 text-white hover:text-indigo-500 text-2xl"
+          >About Us</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+

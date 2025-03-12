@@ -27,31 +27,68 @@
 
 <!--SECTION 2-->
 <div class="bg-[#F2EFEB] p-10 rounded-2xl shadow-lg w-[1440px] mx-auto mb-80">
-  <h1 class="text-5xl font-bold text-left mb-6">
+  <h1 class="text-5xl font-bold text-left p-10 ml-8">
     <span class="text-black">LOREM IPSUM </span>
     <span class="text-red-600">DOLOR SIT</span>
   </h1>
 
-  <div class="grid grid-cols-2 gap-8 items-center">
+  <div class="grid grid-cols-[auto_1fr_1fr_auto] gap-8 items-center">
+    <!-- Left Arrow -->
+    <button
+      (click)="prevSlide()"
+      class="inline-block rounded-full border border-black bg-black p-3 text-white hover:bg-transparent hover:text-black focus:ring-3"
+    >
+      <span class="sr-only">Previous</span>
+      <svg class="size-5 rtl:rotate-180 -scale-100" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+    </button>
+
+    <!-- Text Content -->
     <div>
-      <p class="text-gray-700 leading-relaxed text-2xl text-justify mr-10">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum eleifend felis. In hac habitasse platea
-        dictumst. In hac habitasse platea dictumst. Sed molestie malesuada orci non consectetur. Proin ac quam
-        consectetur, tempor metus id, sollicitudin leo. Nulla tellus ligula, mollis id eros a, consectetur eleifend dui.
-        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam
-        sollicitudin
-        ante sit amet dolor dictum ullamcorper. Nullam sed bibendum enim. Maecenas luctus sem at neque faucibus
-        pellentesque. Morbi purus nunc, pretium id placerat vitae, ultricies rutrum ligula. Aliquam rutrum commodo erat.
+      <p class="text-black leading-relaxed text-2xl text-justify mr-10">
+        {{ slides[currentIndex].text }}
       </p>
     </div>
 
+    <!-- Image & Year -->
     <div class="flex flex-col items-center">
-      <img src="image3.jpg" class="rounded-lg w-full">
-
-      <div class="text-2xl font-bold mt-4">1978–1980</div>
+      <img [src]="slides[currentIndex].image" class="rounded-lg w-[500px] h-[300px] object-cover" alt="Slide Image">
+      <div class="text-6xl font-bold mt-12 mb-6">{{ slides[currentIndex].year }}</div>
     </div>
+
+    <!-- Right Arrow -->
+    <button
+      (click)="nextSlide()"
+      class="inline-block rounded-full border border-black bg-black p-3 text-white hover:bg-transparent hover:text-black focus:ring-3"
+    >
+      <span class="sr-only">Next</span>
+      <svg class="size-5 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Dots Navigation -->
+    <div class="flex justify-center mt-6 space-x-3">
+    <button
+      *ngFor="let slide of slides; let i = index"
+      (click)="goToSlide(i)"
+      class="w-4 h-4 rounded-full"
+      [ngClass]="{'bg-black': currentIndex === i, 'bg-gray-400': currentIndex !== i}"
+    ></button>
+  </div>
+
+  <div class="flex justify-center mt-6 space-x-3">
+    <button class="w-4 h-4 bg-gray-400 rounded-full focus:bg-black"></button>
+    <button class="w-4 h-4 bg-gray-400 rounded-full focus:bg-black"></button>
+    <button class="w-4 h-4 bg-gray-400 rounded-full focus:bg-black"></button>
   </div>
 </div>
+
+
+
+
 
 
 

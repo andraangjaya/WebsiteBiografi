@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import {NgClass} from '@angular/common';
+import {NgClass, NgStyle} from '@angular/common';
 
 @Component({
   selector: 'app-home',
   imports: [
-    NgClass
+    NgClass,
+    NgStyle
   ],
   templateUrl: './home.component.html',
   standalone: true,
@@ -46,3 +47,4 @@ export class HomeComponent {
     this.currentIndex = index;
   }
 }
+

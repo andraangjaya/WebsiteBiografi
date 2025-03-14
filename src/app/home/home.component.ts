@@ -67,20 +67,23 @@ export class HomeComponent {
   testimonials = [
     {
       stars: 5,
-      title: 'Loved it!',
-      content: 'The product far exceeded my expectations. The team was amazing!',
+      title: 'Lorem Ipsum Dolor Sit',
+      content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veritatis illo placeat\n' +
+        '        harum porro optio fugit a culpa sunt id!',
       author: 'John Doe'
     },
     {
       stars: 4,
-      title: 'Pretty good experience',
-      content: 'Overall solid, a few issues here and there, but support was great.',
+      title: 'Lorem Ipsum Dolor Sit',
+      content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veritatis illo placeat\n' +
+        '        harum porro optio fugit a culpa sunt id!',
       author: 'Jane Smith'
     },
     {
       stars: 5,
-      title: 'Best purchase ever',
-      content: 'I can’t imagine my daily workflow without it now. 10/10 recommended!',
+      title: 'Lorem Ipsum Dolor Sit',
+      content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veritatis illo placeat\n' +
+        '        harum porro optio fugit a culpa sunt id!',
       author: 'David Johnson'
     }
   ];

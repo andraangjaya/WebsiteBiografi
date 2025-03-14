@@ -14,7 +14,8 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum eleifend felis. In hac habitasse platea
         dictumst. In hac habitasse pla tea dictumst. Sed molestie malesuada orci non consectetur. Proin ac quam
         consectetur, tempor metus id, sollicitudin leo. Nulla tellus ligula, mollis id eros a, consectetur eleifend dui.
-        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam sollicitudin
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam
+        sollicitudin
         ante sit amet dolor dictum ullamcorper. Nullam sed bibendum enim. Maecenas luctus sem at neque faucibus
         pellentesque. Morbi purus nunc, pretium id placerat vitae, ultricies rutrum ligula. Aliquam rutrum commodo erat.
       </p>
@@ -78,55 +79,151 @@
       [ngClass]="{'bg-black': currentIndex === i, 'bg-gray-400': currentIndex !== i}"
     ></button>
   </div>
-
-  <div class="flex justify-center mt-6 space-x-3">
-    <button class="w-4 h-4 bg-gray-400 rounded-full focus:bg-black"></button>
-    <button class="w-4 h-4 bg-gray-400 rounded-full focus:bg-black"></button>
-    <button class="w-4 h-4 bg-gray-400 rounded-full focus:bg-black"></button>
-  </div>
 </div>
+
 
 <!--SECTION 3-->
-<div class="bg-white p-10 rounded-xl shadow-lg w-[1200px] mx-auto flex items-center space-x-10 mb-50">
-  <!-- Text Section -->
-  <div class="w-1/2">
-    <h1 class="text-4xl font-bold mb-4">
-      <span class="text-black">LOREM IPSUM </span>
-      <span class="text-red-600">DOLOR SIT</span>
-    </h1>
-    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec efficitur magna, id dictum lorem. Quisque semper lorem a est tincidunt ultricies. Donec tincidunt malesuada arcu, in sollicitudin libero convallis finibus.
-    </p>
+<section>
+  <div class="grid grid-cols-2 gap-10 mr-30 ml-60 mb-50">
+    <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-10">
+        Don't just take our word for it...
+      </h2>
 
-    <!-- Navigation Buttons -->
-    <div class="flex items-center space-x-4 mb-6">
-      <!-- Left Arrow -->
-      <button class="bg-black text-white p-3 rounded-full hover:bg-gray-800">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
+      <p class="mt-4 text-gray-700">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veritatis illo placeat
+        harum porro optio fugit a culpa sunt id!
+      </p>
 
-      <!-- Right Arrow -->
-      <button class="bg-black text-white p-3 rounded-full hover:bg-gray-800">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
+      <div class="hidden lg:mt-8 lg:flex lg:gap-4">
+        <button
+          aria-label="Previous slide"
+          (click)="prevTestimonial()"
+          class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-5 rtl:rotate-180"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </button>
+
+        <button
+          aria-label="Next slide"
+          (click)="nextTestimonial()"
+          class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+        >
+          <svg
+            class="size-5 rtl:rotate-180"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 5l7 7-7 7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
+    <ng-container *ngFor="let testimoni of testimonials; let i = index">
+      <div
+        *ngIf="i === currentSlide"
+        class="transition-opacity duration-300 ease-in-out"
+      >
+        <div>
+          <div>
+            <blockquote
+              class="flex h-full flex-col justify-between bg-white p-6 shadow-xs drop-shadow-lg sm:p-8 lg:p-12"
+            >
+              <div>
+                <div class="flex gap-0.5 text-green-500">
+                  <app-star></app-star>
+                  <app-star></app-star>
+                </div>
 
-    <!-- Read More Button -->
-    <button class="bg-black text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-800">
-      READ MORE
-    </button>
-  </div>
+                <div class="mt-4">
+                  <p class="text-2xl font-bold text-rose-600 sm:text-3xl">{{testimoni.title}}</p>
 
-  <!-- Image Section -->
-  <div class="w-1/2 flex space-x-4">
-    <img src="image2.jpg" class="w-1/2 h-80 object-cover rounded-lg shadow-lg" />
-    <img src="image3.jpg" class="w-1/2 h-80 object-cover rounded-lg shadow-lg" />
+                  <p class="mt-4 leading-relaxed text-gray-700">
+                    {{testimoni.content}}
+                  </p>
+                </div>
+              </div>
+
+              <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                &mdash; Michael Scott
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </ng-container>
   </div>
-</div>
+</section>
+
+
+
+
+
+
+<!--<div class=" w-[1200px] mx-auto flex items-center space-x-10 mb-50">-->
+<!--  &lt;!&ndash; Text Section &ndash;&gt;-->
+<!--  <div class="w-1/2">-->
+<!--    <h1 class="text-4xl font-bold mb-4">-->
+<!--      <span class="text-black">LOREM IPSUM </span>-->
+<!--      <span class="text-red-600">DOLOR SIT</span>-->
+<!--    </h1>-->
+<!--    <p class="text-gray-700 text-lg leading-relaxed mb-6">-->
+<!--      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec efficitur magna, id dictum lorem. Quisque-->
+<!--      semper lorem a est tincidunt ultricies. Donec tincidunt malesuada arcu, in sollicitudin libero convallis finibus.-->
+<!--    </p>-->
+
+<!--    &lt;!&ndash; Navigation Buttons &ndash;&gt;-->
+<!--    <div class="flex items-center space-x-4 mb-6">-->
+<!--      &lt;!&ndash; Left Arrow &ndash;&gt;-->
+<!--      <button class="bg-black text-white p-3 rounded-full hover:bg-gray-800">-->
+<!--        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"-->
+<!--             class="w-6 h-6">-->
+<!--          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>-->
+<!--        </svg>-->
+<!--      </button>-->
+
+<!--      &lt;!&ndash; Right Arrow &ndash;&gt;-->
+<!--      <button class="bg-black text-white p-3 rounded-full hover:bg-gray-800">-->
+<!--        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"-->
+<!--             class="w-6 h-6">-->
+<!--          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>-->
+<!--        </svg>-->
+<!--      </button>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Read More Button &ndash;&gt;-->
+<!--    <button class="bg-black text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-800">-->
+<!--      READ MORE-->
+<!--    </button>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash; Image Section &ndash;&gt;-->
+<!--  <div class="w-1/2 flex space-x-4">-->
+<!--    <img src="image2.jpg" class="w-1/2 h-80 object-cover rounded-lg shadow-lg"/>-->
+<!--    <img src="image3.jpg" class="w-1/2 h-80 object-cover rounded-lg shadow-lg"/>-->
+<!--  </div>-->
+<!--</div>-->
+
 
 
 

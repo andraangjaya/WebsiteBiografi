@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NgClass, NgForOf, NgIf, NgStyle} from '@angular/common';
 import {StarComponent} from '../share/star/star.component';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,8 @@ import {StarComponent} from '../share/star/star.component';
     NgStyle,
     NgForOf,
     NgIf,
-    StarComponent
+    StarComponent,
+    RouterLink
   ],
   templateUrl: './home.component.html',
   standalone: true,
@@ -67,7 +69,7 @@ export class HomeComponent {
   testimonials = [
     {
       stars: 5,
-      title: 'Lorem Ipsum Dolor Sit',
+      title: 'Lorem Ipsum Dolor',
       content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veritatis illo placeat\n' +
         '        harum porro optio fugit a culpa sunt id!',
       author: 'John Doe'
@@ -81,7 +83,7 @@ export class HomeComponent {
     },
     {
       stars: 5,
-      title: 'Lorem Ipsum Dolor Sit',
+      title: 'Lorem Ipsum Dolor Sit Amet',
       content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veritatis illo placeat\n' +
         '        harum porro optio fugit a culpa sunt id!',
       author: 'David Johnson'
@@ -101,6 +103,8 @@ export class HomeComponent {
     this.currentSlide =
       (this.currentSlide + this.testimonials.length - 1) % this.testimonials.length;
   }
+
+
 
 
 }

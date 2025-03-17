@@ -83,12 +83,13 @@
   <div class="grid grid-cols-2 gap-10 md:px-20 mx-auto mb-50">
     <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-10">
-        Lorem Ipsum Dolor Sit
+        Harapan dan Prinsip Hidup
       </h2>
 
-      <p class="mt-4 text-gray-700">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veritatis illo placeat
-        harum porro optio fugit a culpa sunt id!
+      <p class="mt-4 text-black">
+        Beliau berkata "Harapan dan impian saya dulu sesuai dengan cita cita saya. Pingin menjadi pemain bola atau penyanyi. Kalau sekarang
+        ya gak neko neko lah, cuma pengen jadi orang yang memiliki jalan hidup yang baik dan bisa membahagiakan keluarga
+        saya"
       </p>
 
       <div class="hidden lg:mt-8 lg:flex lg:gap-4">
@@ -150,8 +151,10 @@
             >
 
               <div class="flex gap-0.5 text-green-500">
-                <app-star></app-star>
-                <app-star></app-star>
+                <ng-container *ngFor="let star of [].constructor(i + 1)">
+                  <app-star></app-star>
+                </ng-container>
+
               </div>
 
               <div class="mt-4">
@@ -164,7 +167,7 @@
 
 
               <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
-                &mdash; Lorem Ipsum
+                &mdash; Muhammad Agus Wahyudi
               </footer>
             </blockquote>
           </div>

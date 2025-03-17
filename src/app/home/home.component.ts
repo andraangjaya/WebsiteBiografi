@@ -53,25 +53,22 @@ export class HomeComponent {
 
   testimonials = [
     {
-      stars: 5,
-      title: 'Lorem Ipsum Dolor',
-      content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veritatis illo placeat\n' +
-        '        harum porro optio fugit a culpa sunt id!',
-      author: 'John Doe'
+      stars: 1,
+      title: 'Setiap Momen Berkesan',
+      content: '"Karena saya selalu menikmati apapun dalam profesi saya. Sehingga akhirnya setiap momen selalu punya kesannya sendiri sendiri."',
+      author: 'Muhammad Agus Wahyudi'
     },
     {
-      stars: 4,
-      title: 'Lorem Ipsum Dolor Sit',
-      content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veritatis illo placeat\n' +
-        '        harum porro optio fugit a culpa sunt id!',
-      author: 'Jane Smith'
+      stars: 2,
+      title: '5 Tahun Kedepan? Berusaha Menjadi Lebih Baik Tanpa Beban',
+      content: '"Keinginan saya adalah selalu lebih baik dari sekarang. Tidak ada spesifik apa yang harus saya capai, supaya tidak menjadi beban juga bagi saya. Yang saya lakukan hanya ikhtiar untuk berusaha menjadi lebih baik dri sekarang dalam segala hal."',
+      author: 'Muhammad Agus Wahyudi'
     },
     {
-      stars: 5,
-      title: 'Lorem Ipsum Dolor Sit Amet',
-      content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veritatis illo placeat\n' +
-        '        harum porro optio fugit a culpa sunt id!',
-      author: 'David Johnson'
+      stars: 3,
+      title: 'Memberi Manfaat bagi Sesama',
+      content: '"Motivasi saya \'Selalu bermanfaat bagi orang lain.\' Itu yang saya pegang, bahwa kita hidup harus selalu bermanfaat bagi orang lain."',
+      author: 'Muhammad Agus Wahyudi'
     }
   ];
 

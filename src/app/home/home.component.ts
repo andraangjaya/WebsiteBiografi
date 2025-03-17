@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {NgClass, NgForOf, NgIf, NgStyle} from '@angular/common';
 import {StarComponent} from '../share/star/star.component';
 import {RouterLink} from '@angular/router';
@@ -21,32 +21,17 @@ import {RouterLink} from '@angular/router';
 export class HomeComponent {
   slides = [
     {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum eleifend felis. In hac habitasse platea\n" +
-        "      dictumst. In hac habitasse platea dictumst. Sed molestie malesuada orci non consectetur. Proin ac quam\n" +
-        "      consectetur, tempor metus id, sollicitudin leo. Nulla tellus ligula, mollis id eros a, consectetur eleifend dui.\n" +
-        "      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam sollicitudin\n" +
-        "      ante sit amet dolor dictum ullamcorper. Nullam sed bibendum enim. Maecenas luctus sem at neque faucibus\n" +
-        "      pellentesque. Morbi purus nunc, pretium id placerat vitae, ultricies rutrum ligula. Aliquam rutrum commodo erat.",
+      text: "Dahulu, sebelum Pak Yudi memulai karirnya sebagai seorang guru, beliau pernah bekerja sebagai sales marketing di sebuah perusahaan variasi motor. Pengalaman ini memberikannya wawasan dan keterampilan dalam bidang penjualan serta komunikasi, yang mungkin turut membentuk karakter dan pendekatannya dalam mengajar. Meskipun kini beliau telah beralih profesi menjadi pendidik, latar belakangnya di dunia marketing motor menunjukkan perjalanan karir yang beragam sebelum akhirnya memilih untuk berdedikasi di bidang pendidikan.",
       image: "image2.jpg",
       year: "1978–1980"
     },
     {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum eleifend felis. In hac habitasse platea\n" +
-        "      dictumst. In hac habitasse platea dictumst. Sed molestie malesuada orci non consectetur. Proin ac quam\n" +
-        "      consectetur, tempor metus id, sollicitudin leo. Nulla tellus ligula, mollis id eros a, consectetur eleifend dui.\n" +
-        "      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam sollicitudin\n" +
-        "      ante sit amet dolor dictum ullamcorper. Nullam sed bibendum enim. Maecenas luctus sem at neque faucibus\n" +
-        "      pellentesque. Morbi purus nunc, pretium id placerat vitae, ultricies rutrum ligula. Aliquam rutrum commodo erat.",
+      text: "Sekarang, Pak Yudi telah menjalani profesi sebagai guru selama kurang lebih 4 tahun. Beliau tertarik menjadi guru karena merasa bakatnya memang ada di bidang ini, dan sama sekali tidak keberatan menjalaninya. Selain itu, motivasinya untuk mengamalkan ilmu yang dimiliki menjadi salah satu alasan utamanya, karena ia ingin menjadikan profesinya sebagai investasi untuk akhirat. Dedikasinya dalam dunia pendidikan mencerminkan komitmennya untuk berkontribusi dan berbagi pengetahuan dengan generasi penerus.",
       image: "image3.jpg",
       year: "1981–1985"
     },
     {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum eleifend felis. In hac habitasse platea\n" +
-        "      dictumst. In hac habitasse platea dictumst. Sed molestie malesuada orci non consectetur. Proin ac quam\n" +
-        "      consectetur, tempor metus id, sollicitudin leo. Nulla tellus ligula, mollis id eros a, consectetur eleifend dui.\n" +
-        "      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam sollicitudin\n" +
-        "      ante sit amet dolor dictum ullamcorper. Nullam sed bibendum enim. Maecenas luctus sem at neque faucibus\n" +
-        "      pellentesque. Morbi purus nunc, pretium id placerat vitae, ultricies rutrum ligula. Aliquam rutrum commodo erat.",
+      text: "Lalu keinginan Pak Yudi dalam 5 tahun kedepan adalah selalu lebih baik dari sekarang. Tidak ada spesifikasi yang harus ia capai, agar tidak menjadi beban dan beliau lakukan hanya ikhtiar untuk berusaha menjadi lebih baik dari sekarang dalam berbagai hal. Beliau juga selalu menikmati apapun dalan profesinya, sehingga setiap momen selalu punya kesannya sendiri.",
       image: "image4.jpg",
       year: "1986–1990"
     }
@@ -103,8 +88,6 @@ export class HomeComponent {
     this.currentSlide =
       (this.currentSlide + this.testimonials.length - 1) % this.testimonials.length;
   }
-
-
 
 
 }

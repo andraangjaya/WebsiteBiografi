@@ -27,78 +27,7 @@
 </div>
 
 <!--SECTION 2-->
-<!--<div class="relative w-full mx-auto">-->
-<!--  <div class="absolute left-5 top-1/2 -translate-y-1/2 text-3xl text-gray-600">-->
-<!--    <button-->
-<!--      (click)="prevSlide()"-->
-<!--      class="inline-block rounded-full border border-black bg-black p-3 text-white hover:bg-transparent hover:text-black focus:ring-3"-->
-<!--    >-->
-<!--      <span class="sr-only">Previous</span>-->
-<!--      <svg class="size-5 rtl:rotate-180 -scale-100" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"-->
-<!--           stroke="currentColor">-->
-<!--        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>-->
-<!--      </svg>-->
-<!--    </button>-->
-<!--  </div>-->
-
-<!--  <div class="grid grid-cols-1 md:grid-cols-2 bg-[#F2EFEB] p-10 rounded-2xl shadow-lg w-[1440px] mx-auto mb-50">-->
-
-<!--    <div>-->
-<!--      <h1 class="text-5xl font-bold text-left p-10 ml-8">-->
-<!--        <span class="text-black">PERJALANAN </span>-->
-<!--        <span class="text-red-600">KARIR HIDUP</span>-->
-<!--      </h1>-->
-
-<!--      <div class="flex flex-col items-center">-->
-<!--        <img [src]="slides[currentIndex].image" class="rounded-lg w-[500px] h-[300px] object-cover" alt="Slide Image">-->
-<!--        <div class="text-6xl font-bold mt-12 mb-6">{{ slides[currentIndex].year }}</div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--      <p class="text-black leading-relaxed text-2xl text-justify mr-20 mt-10">-->
-<!--        {{ slides[currentIndex].text }}-->
-<!--      </p>-->
-<!--    </div>-->
-
-<!--    <div class="col-span-1 md:col-span-2">-->
-<!--      <div class="flex justify-center mt-6 space-x-3">-->
-<!--        <button-->
-<!--          *ngFor="let slide of slides; let i = index"-->
-<!--          (click)="goToSlide(i)"-->
-<!--          class="w-4 h-4 rounded-full"-->
-<!--          [ngClass]="{'bg-black': currentIndex === i, 'bg-gray-400': currentIndex !== i}"-->
-<!--        ></button>-->
-<!--      </div>-->
-<!--    </div>-->
-
-<!--    &lt;!&ndash;  <div class="relative flex items-center justify-between w-full max-w-3xl mx-auto">&ndash;&gt;-->
-
-
-<!--    &lt;!&ndash;    &ndash;&gt;-->
-<!--    &lt;!&ndash;  </div>&ndash;&gt;-->
-
-<!--    &lt;!&ndash;  <div class="relative">&ndash;&gt;-->
-
-<!--    &lt;!&ndash;  </div>&ndash;&gt;-->
-<!--  </div>-->
-
-<!--  <div class="absolute right-2 top-1/2 -translate-y-1/2 text-3xl text-gray-600">-->
-<!--    <button-->
-<!--      (click)="nextSlide()"-->
-<!--      class="inline-block rounded-full border border-black bg-black p-3 text-white hover:bg-transparent hover:text-black focus:ring-3"-->
-<!--    >-->
-<!--      <span class="sr-only">Next</span>-->
-<!--      <svg class="size-5 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"-->
-<!--           stroke="currentColor">-->
-<!--        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>-->
-<!--      </svg>-->
-<!--    </button>-->
-<!--  </div>-->
-
-<!--</div>-->
-
 <div class="relative w-full mx-auto">
-
   <!-- Left Button -->
   <button
     (click)="prev()"
@@ -112,7 +41,7 @@
 
   <!-- The scrollable container -->
   <div
-    class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 overflow-x-auto scroll-smooth snap-x snap-mandatory bg-[#F2EFEB]">
+    class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 overflow-x-auto scroll-smooth snap-x snap-mandatory bg-[#F2EFEB] mb-30">
     <ng-container *ngFor="let testimoni of testimonials; let i = index">
       <ng-container *ngIf="i === currentIndex">
         <!-- Column 1 -->
@@ -130,14 +59,14 @@
 
         <!-- Column 2 -->
         <div class="p-4  snap-start">
-          <div class="flex flex-col items-center">
-            <p class="text-black leading-relaxed text-2xl text-justify md:mr-20 mt-10">
+          <div class="flex flex-col justify-center h-full">
+            <p class="text-black leading-relaxed text-2xl text-justify md:mr-20">
               {{ slides[currentIndex].text }}</p>
           </div>
         </div>
 
         <div class="col-span-1 md:col-span-2">
-          <div class="flex justify-center mt-6 space-x-3">
+          <div class="flex justify-center mt-6 mb-10 space-x-3">
             <button
               *ngFor="let slide of slides; let i = index"
               (click)="goToSlide(i)"
@@ -166,8 +95,8 @@
 
 <!--SECTION 3-->
 <section>
-  <div class="grid grid-cols-2 gap-10 md:px-20 mx-auto mb-50">
-    <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:px-20 mx-auto mb-50">
+    <div class="w-full text-center ltr:sm:text-left rtl:sm:text-right p-4">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-10">
         Harapan dan Prinsip Hidup
       </h2>
@@ -179,11 +108,11 @@
         saya"
       </p>
 
-      <div class="hidden lg:mt-8 lg:flex lg:gap-4">
+      <div class="mt-5 lg:mt-8 lg:flex lg:gap-4">
         <button
           aria-label="Previous slide"
           (click)="prevTestimonial()"
-          class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+          class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white mr-5 md:mr-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

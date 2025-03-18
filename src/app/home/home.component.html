@@ -102,7 +102,7 @@
   <!-- Left Button -->
   <button
     (click)="prev()"
-    class="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full border border-black bg-black text-white p-3 hover:bg-gray-50"
+    class="absolute left-5 top-1/2 -translate-y-1/2 z-10 rounded-full border border-black bg-black text-white p-3 hover:bg-transparent hover:text-black focus:ring-3"
   >
     <svg class="size-5 rtl:rotate-180 -scale-100" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
          stroke="currentColor">
@@ -112,37 +112,56 @@
 
   <!-- The scrollable container -->
   <div
-    class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 overflow-x-auto scroll-smooth snap-x snap-mandatory"
-  >
+    class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 overflow-x-auto scroll-smooth snap-x snap-mandatory bg-[#F2EFEB]">
     <ng-container *ngFor="let testimoni of testimonials; let i = index">
-      <ng-container *ngIf="i === currentIndex"
-      >
+      <ng-container *ngIf="i === currentIndex">
         <!-- Column 1 -->
-        <div class="bg-gray-200 p-4 rounded shadow snap-start">
-          <h2 class="text-xl font-bold mb-2">Column 1</h2>
-          <img [src]="slides[currentIndex].image" class="rounded-lg w-[500px] h-[300px] object-cover" alt="Slide Image">
+        <div class=" p-4 snap-start">
+          <h1 class="text-5xl font-bold text-left p-10 ml-8">
+            <span class="text-black">PERJALANAN </span>
+            <span class="text-red-600">KARIR HIDUP</span>
+          </h1>
+          <div class="flex flex-col items-center">
+            <img [src]="slides[currentIndex].image" class="rounded-lg w-[500px] h-[300px] object-cover"
+                 alt="Slide Image">
+            <div class="text-6xl font-bold mt-12 mb-6">{{ slides[currentIndex].year }}</div>
+          </div>
         </div>
 
         <!-- Column 2 -->
-        <div class="bg-gray-200 p-4 rounded shadow snap-start">
-          <h2 class="text-xl font-bold mb-2">Column 2</h2>
-          <p>{{testimoni.content}}</p>
+        <div class="p-4  snap-start">
+          <div class="flex flex-col items-center">
+            <p class="text-black leading-relaxed text-2xl text-justify md:mr-20 mt-10">
+              {{ slides[currentIndex].text }}</p>
+          </div>
         </div>
+
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex justify-center mt-6 space-x-3">
+            <button
+              *ngFor="let slide of slides; let i = index"
+              (click)="goToSlide(i)"
+              class="w-4 h-4 rounded-full"
+              [ngClass]="{'bg-black': currentIndex === i, 'bg-gray-400': currentIndex !== i}"
+            ></button>
+          </div>
+        </div>
+
       </ng-container>
     </ng-container>
-
   </div>
 
   <!-- Right Button -->
   <button
     (click)="next()"
-    class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-300 px-3 py-2 shadow hover:bg-gray-50"
+    class="absolute right-5 top-1/2 -translate-y-1/2 z-10 rounded-full border border-black bg-black text-white p-3 hover:bg-transparent hover:text-black focus:ring-3"
   >
-    Next
+    <svg class="size-5 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+         stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+    </svg>
   </button>
 </div>
-
-
 
 
 <!--SECTION 3-->

@@ -5,44 +5,38 @@
 <header class="bg-black border-b sticky top-0 z-50">
   <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
     <!-- Brand / Logo -->
-    <div class="text-5xl mt-5 mb-5 ml-20 font-bold text-white tracking-wide">
-      N A M A B I O G R A F I
+    <div class="text-2xl md:text-5xl mt-5 mb-5 ml-5 md:ml-0 font-bold text-white tracking-widest">
+      <h1 class="tracking-widest">BIOGRAFI PAK YUDI</h1>
     </div>
 
     <!-- Nav Links -->
     <!-- On mobile: hidden when isOpen=false, shown when isOpen=true -->
     <!-- On md+ screens: always shown (flex) -->
+    <button class="md:hidden focus:outline-none relative z-50" (click)="toggleMenu()">
+      <svg class="w-8 h-8" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
     <div
-      class="w-full md:w-auto md:flex md:items-center"
+      class="absolute top-[90px] right-0 w-48 bg-black text-white rounded-lg shadow-lg py-3 md:hidden"
       [ngClass]="{
-        'hidden': !isOpen,
-        'block': isOpen,
-        'mt-3': isOpen,
-        'md:mt-0': true
-      }"
+    'hidden': !isOpen,
+    'block': isOpen
+  }"
     >
-      <ul class="md:flex md:space-x-6">
-        <li>
-          <a
-            routerLink="/"
-            class="block px-2 py-1 text-white hover:text-indigo-500 text-2xl"
-          >Home</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="/biography"
-            class="block px-2 py-1 text-white hover:text-indigo-500 text-2xl"
-          >Biography</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="/about-us"
-            class="block px-2 py-1 text-white hover:text-indigo-500 text-2xl"
-          >About Us</a
-          >
-        </li>
+      <ul class="ml-10 text-right space-y-1">
+        <li class="border-b border-white last:border-none"><a routerLink="/" class="block px-8 py-2 hover:bg-gray-700 rounded-md mb-1">Home</a></li>
+        <li class="border-b border-white last:border-none"><a routerLink="/biography" class="block px-8 py-2 hover:bg-gray-700 rounded-md mb-1">Biography</a></li>
+        <li class="border-b border-white last:border-none"><a routerLink="/about-us" class="block px-8 py-2 hover:bg-gray-700 rounded-md mb-1">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="hidden md:flex md:items-center md:space-x-6">
+      <ul class="flex space-x-10">
+        <li><a routerLink="/" class="text-white hover:text-indigo-500 text-2xl">Home</a></li>
+        <li><a routerLink="/biography" class="text-white hover:text-indigo-500 text-2xl">Biography</a></li>
+        <li><a routerLink="/about-us" class="text-white hover:text-indigo-500 text-2xl">About Us</a></li>
       </ul>
     </div>
   </nav>

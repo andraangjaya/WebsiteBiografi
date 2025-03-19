@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {RouterLink, RouterOutlet} from '@angular/router';
+import {NavigationEnd, Router, RouterLink, RouterOutlet} from '@angular/router';
 import {NavbarComponent} from './navbar/navbar.component';
 import {FooterComponent} from './footer/footer.component';
 
@@ -13,4 +13,11 @@ import {FooterComponent} from './footer/footer.component';
 })
 export class AppComponent {
   title = 'websitebiografi';
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0); // Scroll to top when route changes
+      }
+    });
+  }
 }

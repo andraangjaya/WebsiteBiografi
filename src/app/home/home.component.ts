@@ -22,18 +22,18 @@ export class HomeComponent {
   slides = [
     {
       text: "Dahulu, sebelum Pak Yudi memulai karirnya sebagai seorang guru, beliau pernah bekerja sebagai sales marketing di sebuah perusahaan variasi motor. Pengalaman ini memberikannya wawasan dan keterampilan dalam bidang penjualan serta komunikasi, yang mungkin turut membentuk karakter dan pendekatannya dalam mengajar. Meskipun kini beliau telah beralih profesi menjadi pendidik, latar belakangnya di dunia marketing motor menunjukkan perjalanan karir yang beragam sebelum akhirnya memilih untuk berdedikasi di bidang pendidikan.",
-      image: "image2.jpg",
-      year: "1978–1980"
+      image: "image12.jpg",
+      year: "2017 – 2019"
     },
     {
       text: "Sekarang, Pak Yudi telah menjalani profesi sebagai guru selama kurang lebih 4 tahun. Beliau tertarik menjadi guru karena merasa bakatnya memang ada di bidang ini, dan sama sekali tidak keberatan menjalaninya. Selain itu, motivasinya untuk mengamalkan ilmu yang dimiliki menjadi salah satu alasan utamanya, karena ia ingin menjadikan profesinya sebagai investasi untuk akhirat. Dedikasinya dalam dunia pendidikan mencerminkan komitmennya untuk berkontribusi dan berbagi pengetahuan dengan generasi penerus.",
-      image: "image3.jpg",
-      year: "1981–1985"
+      image: "image13.jpeg",
+      year: "2019 – Sekarang"
     },
     {
       text: "Lalu keinginan Pak Yudi dalam 5 tahun kedepan adalah selalu lebih baik dari sekarang. Tidak ada spesifikasi yang harus ia capai, agar tidak menjadi beban dan beliau lakukan hanya ikhtiar untuk berusaha menjadi lebih baik dari sekarang dalam berbagai hal. Beliau juga selalu menikmati apapun dalan profesinya, sehingga setiap momen selalu punya kesannya sendiri.",
-      image: "image4.jpg",
-      year: "1986–1990"
+      image: "image14.jpg",
+      year: "Sekarang – 2030"
     }
   ];
 

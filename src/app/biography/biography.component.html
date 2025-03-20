@@ -1,15 +1,22 @@
 <div class="max-w-7xl mx-auto bg-white p-6 mt-30 mb-30">
   <h1 class="text-6xl md:text-8xl font-bold text-center mb-20 tracking-widest md:tracking-[2rem] md:ml-15">BIOGRAFI</h1>
 
-  <div class="grid grid-cols-1 items-center bg-black text-white py-4 px-4 mt-4">
-    <span class="font-bold text-center text-2xl">Muhammad Agus Wahyudi S.Pd</span>
+  <div class="grid grid-cols-1 items-center bg-black text-white py-4 px-4 mt-4
+            text-center font-bold text-2xl relative overflow-hidden
+            transition-transform duration-300 hover:scale-105 group hover:text-black cursor-pointer">
+
+    <span class="relative z-10">Muhammad Agus Wahyudi S.Pd</span>
+
+    <!-- Left and Right Expanding Borders -->
+    <span class="absolute inset-y-0 left-0 w-1/2 bg-white scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+    <span class="absolute inset-y-0 right-0 w-1/2 bg-white scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100"></span>
   </div>
 
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-20 relative">
     <div class="text-black text-2xl space-y-6 relative">
       <div>
-        <img src="albert.jpg" class="outline-8 rounded w-[400px]">
+        <img src="image18.jpeg" class="outline-8 rounded w-[400px]">
       </div>
 
       <div class="space-y-2 mt-10">
@@ -47,7 +54,7 @@
         <span>Islam</span>
       </div>
 
-      <div class="hidden md:block absolute top-0 right-[-10px] h-320 w-px bg-black mx-1"></div>
+      <div class="hidden md:block absolute top-0 right-[-10px] h-338 w-px bg-black mx-1"></div>
     </div>
 
 

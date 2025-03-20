@@ -1,6 +1,6 @@
 <!--BANNER-->
 <div class="grid grid-cols-1 md:grid-cols-1">
-  <img src="albert.jpg"
+  <img src="image17.jpeg"
        class="w-full h-[720px] object-cover"
        alt="Banner Image"
   />
@@ -23,8 +23,8 @@
   </div>
 
   <div class="flex justify-center">
-    <div class="w-full max-w-[300px] h-auto">
-      <img src="image2.jpg" class="w-full h-auto object-cover rounded-lg" alt="Image"/>
+    <div class="w-full max-w-[500px] h-auto">
+      <img src="image16.jpeg" class="w-full h-auto object-cover rounded-lg" alt="Image"/>
     </div>
   </div>
 </div>
@@ -35,7 +35,7 @@
   <!-- Left Button -->
   <button
     (click)="prev()"
-    class="absolute left-5 top-1/2 -translate-y-1/2 z-10 rounded-full border border-black bg-black text-white p-3 hover:bg-transparent hover:text-black focus:ring-3"
+    class="absolute left-5 top-1/2 -translate-y-1/2 z-10 rounded-full border border-black bg-black text-white p-3 hover:bg-transparent hover:text-black focus:ring-3 cursor-pointer"
   >
     <svg class="size-5 rtl:rotate-180 -scale-100" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
          stroke="currentColor">
@@ -50,7 +50,7 @@
 
         <!-- Column 1 -->
         <div class=" p-4 snap-start">
-          <h1 class="text-5xl font-bold text-left p-10 ml-8">
+          <h1 class="text-center text-5xl font-bold md:text-left p-10 md:ml-8">
             <span class="text-black">PERJALANAN </span>
             <span class="text-red-600">KARIR HIDUP</span>
           </h1>
@@ -74,7 +74,7 @@
             <button
               *ngFor="let slide of slides; let i = index"
               (click)="goToSlide(i)"
-              class="w-4 h-4 rounded-full"
+              class="w-4 h-4 rounded-full cursor-pointer"
               [ngClass]="{'bg-black': currentIndex === i, 'bg-gray-400': currentIndex !== i}"
             ></button>
           </div>
@@ -86,7 +86,7 @@
   <!-- Right Button -->
   <button
     (click)="next()"
-    class="absolute right-5 top-1/2 -translate-y-1/2 z-10 rounded-full border border-black bg-black text-white p-3 hover:bg-transparent hover:text-black focus:ring-3"
+    class="absolute right-5 top-1/2 -translate-y-1/2 z-10 rounded-full border border-black bg-black text-white p-3 hover:bg-transparent hover:text-black focus:ring-3 cursor-pointer"
   >
     <svg class="size-5 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
          stroke="currentColor">
@@ -114,7 +114,7 @@
         <button
           aria-label="Previous slide"
           (click)="prevTestimonial()"
-          class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white mr-5 md:mr-0"
+          class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white mr-5 md:mr-0 cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@
         <button
           aria-label="Next slide"
           (click)="nextTestimonial()"
-          class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+          class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white cursor-pointer"
         >
           <svg
             class="size-5 rtl:rotate-180"
@@ -153,9 +153,13 @@
           </svg>
         </button>
       </div>
-      <button class="bg-black rounded-lg w-40 h-15 mt-7 text-center">
-        <a class="text-white text-xl " [routerLink]="'/biography'">Read More</a>
+      <button class="bg-black rounded-lg w-40 h-12 mt-7 text-center relative overflow-hidden group border border-black">
+        <a class="text-white text-xl block w-full h-full flex items-center justify-center relative z-10 transition-all duration-300 group-hover:text-black" [routerLink]="'/biography'">
+          Read More
+        </a>
+        <span class="absolute inset-0 bg-white scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
       </button>
+
     </div>
     <ng-container *ngFor="let testimoni of testimonials; let i = index">
       <div

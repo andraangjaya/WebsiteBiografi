@@ -1,24 +1,15 @@
-<!--<span><a routerLink="/">Home</a></span> <br>-->
-<!--<span><a routerLink="/biography">Biography</a></span> <br>-->
-<!--<span><a routerLink="/about-us">About Us</a></span> <br>-->
-
 <header class="bg-black border-b sticky top-0 z-50">
   <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
-    <!-- Brand / Logo -->
     <div class="text-2xl md:text-5xl mt-5 mb-5 ml-5 md:ml-0 font-bold text-white tracking-widest">
       <h1 class="tracking-widest md:ml-20">BIOGRAFI PAK YUDI</h1>
     </div>
 
-    <!-- Nav Links -->
-    <!-- On mobile: hidden when isOpen=false, shown when isOpen=true -->
-    <!-- On md+ screens: always shown (flex) -->
     <button class="md:hidden focus:outline-none relative z-50" (click)="toggleMenu()">
       <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="4" y1="6" x2="20" y2="6" />
         <line x1="4" y1="12" x2="20" y2="12" />
         <line x1="4" y1="18" x2="20" y2="18" />
       </svg>
-
     </button>
 
     <div
@@ -29,9 +20,15 @@
   }"
     >
       <ul class="ml-10 text-right space-y-1">
-        <li class="border-b border-white last:border-none"><a routerLink="/" class="block px-8 py-2 hover:bg-gray-700 rounded-md mb-1">Home</a></li>
-        <li class="border-b border-white last:border-none"><a routerLink="/biography" class="block px-8 py-2 hover:bg-gray-700 rounded-md mb-1">Biography</a></li>
-        <li class="border-b border-white last:border-none"><a routerLink="/about-us" class="block px-8 py-2 hover:bg-gray-700 rounded-md mb-1">About Us</a></li>
+        <li class="border-b border-white last:border-none">
+          <a routerLink="/" class="block px-8 py-2 hover:bg-gray-700 rounded-md mb-1">Home</a>
+        </li>
+        <li class="border-b border-white last:border-none">
+          <a routerLink="/biography" class="block px-8 py-2 hover:bg-gray-700 rounded-md mb-1">Biography</a>
+        </li>
+        <li class="border-b border-white last:border-none">
+          <a routerLink="/about-us" class="block px-8 py-2 hover:bg-gray-700 rounded-md mb-1">About Us</a>
+        </li>
       </ul>
     </div>
 

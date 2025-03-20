@@ -57,21 +57,18 @@ export class HomeComponent {
       title: 'Setiap Momen Berkesan',
       content: '"Karena saya selalu menikmati apapun dalam profesi saya. Sehingga akhirnya setiap momen selalu punya kesannya sendiri sendiri."',
       author: 'Muhammad Agus Wahyudi',
-      image: 'image6.jpg'
     },
     {
       stars: 2,
       title: '5 Tahun Kedepan? Berusaha Menjadi Lebih Baik Tanpa Beban',
       content: '"Keinginan saya adalah selalu lebih baik dari sekarang. Tidak ada spesifik apa yang harus saya capai, supaya tidak menjadi beban juga bagi saya. Yang saya lakukan hanya ikhtiar untuk berusaha menjadi lebih baik dri sekarang dalam segala hal."',
       author: 'Muhammad Agus Wahyudi',
-      image: 'image2.jpg'
     },
     {
       stars: 3,
       title: 'Memberi Manfaat bagi Sesama',
       content: '"Motivasi saya \'Selalu bermanfaat bagi orang lain.\' Itu yang saya pegang, bahwa kita hidup harus selalu bermanfaat bagi orang lain."',
       author: 'Muhammad Agus Wahyudi',
-      image: 'image9.jpg'
     }
   ];
 
